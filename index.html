@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bank Chart</title>
+</head>
+<body>
+   <section class="container mx-auto mt-4">
+    <div class="grid grid-cols-3">
+        <div class="col-span-1">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-span-2">
+            <div class="w-full flex justify-center">
+                <div class="w-[580px] h-[200px] bg-red-300 flex justify-center items-center">
+                    <h2 class="text-6xl">Total: <span id="totalDisply">0</span> ৳</h2>
+                </div>
+            </div>
+            <div class="flex mt-4 gap-4 justify-center">
+                <div class="w-[300px] h-[200px] bg-slate-600 flex justify-center items-center">  
+                    <h2 class="text-white">Deposit: <span id="deposite">0</span> ৳</h2></div>
+                <div class="w-[300px] h-[200px] bg-emerald-600 flex justify-center items-center">  
+                    <h2 class="text-white">Withdraw: <span id="withdrawAmount">0</span> ৳</h2></div>
+            </div>
+            <div class="mt-3 flex justify-center gap-2">
+                <input id="depoAmount" class="border border-slate-600 w-[300px] p-3" type="number" min="0" placeholder="Deposit">
+                <button class="p-3 bg-rose-600" id="depoBtn">Deposit</button>
+                <input id="userAmount" class="border border-slate-600 w-[300px] p-3" type="number" min="0" placeholder="Withdraw">
+                <button class="p-3 bg-rose-600" id="withdrawBtn">Withdraw</button>
+            </div>
+        </div>
+    </div>
+   </section>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="/js/deposit.js"></script>
+   <script src="/js/withdraw.js"></script>
+   <script src="/js/chart.js"></script>
+</body>
+</html>
